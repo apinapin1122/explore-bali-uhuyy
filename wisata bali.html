@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca42a1f6e2c5c836584aa5ed9bfa58b0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ca42a1f6e2c5c836584aa5ed9bfa58b0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca42a1f6e2c5c836584aa5ed9bfa58b0 = L.map(
+                "map_ca42a1f6e2c5c836584aa5ed9bfa58b0",
+                {
+                    center: [-8.40876084104688, 115.20105291690847],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ac4549b7a38f778eec0b7667a9a6eaf1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ac4549b7a38f778eec0b7667a9a6eaf1.addTo(map_ca42a1f6e2c5c836584aa5ed9bfa58b0);
+        
+    
+            var heat_map_85394961767b1dd17d9cc44295908590 = L.heatLayer(
+                [[-8.440911165, 115.3868186], [-8.522936955, 115.2870847], [-8.413375049, 115.3588599], [-8.690490752, 115.4302884], [-8.481604508, 115.2070717], [-8.57519696, 115.2891238]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_85394961767b1dd17d9cc44295908590.addTo(map_ca42a1f6e2c5c836584aa5ed9bfa58b0);
+        
+    
+            var marker_cluster_8705c66440767deda3fa4aa70a4f85ba = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_7ce728b7afd710722ddd646cefe4ca15 = L.marker(
+                [-8.440911165, 115.3868186],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_4f107b8976a4c943d527729d2b2fc20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e360507d5c5adb96612ba8a38224300 = $(`<div id="html_8e360507d5c5adb96612ba8a38224300" style="width: 100.0%; height: 100.0%;">Air terjun Tukad Cepung:Jl. Tembuku, Tembuku, Kec. Tembuku, Kabupaten Bangli, Bali 80671</div>`)[0];
+                popup_4f107b8976a4c943d527729d2b2fc20c.setContent(html_8e360507d5c5adb96612ba8a38224300);
+            
+        
+
+        marker_7ce728b7afd710722ddd646cefe4ca15.bindPopup(popup_4f107b8976a4c943d527729d2b2fc20c)
+        ;
+
+        
+    
+    
+            var marker_75159dde8ee635cde93ebfd3dddb4561 = L.marker(
+                [-8.522936955, 115.2870847],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_8a953ffa46c2f782fd8be2c958e3018a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0cf1e7d6217031bc6b83f384896f1b69 = $(`<div id="html_0cf1e7d6217031bc6b83f384896f1b69" style="width: 100.0%; height: 100.0%;">Goa Gajah:Bedulu, Blahbatuh, Gianyar Regency, Bali</div>`)[0];
+                popup_8a953ffa46c2f782fd8be2c958e3018a.setContent(html_0cf1e7d6217031bc6b83f384896f1b69);
+            
+        
+
+        marker_75159dde8ee635cde93ebfd3dddb4561.bindPopup(popup_8a953ffa46c2f782fd8be2c958e3018a)
+        ;
+
+        
+    
+    
+            var marker_6f3cf671139ecdf4b5464fb31ba7a557 = L.marker(
+                [-8.413375049, 115.3588599],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_4535467db3b261cffaf51879d3e29787 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65d27d43116cfc3fe74ec1d8a0f26b28 = $(`<div id="html_65d27d43116cfc3fe74ec1d8a0f26b28" style="width: 100.0%; height: 100.0%;">Panglipuran Village:Jl. Penglipuran, Kubu, Kec. Bangli, Kabupaten Bangli, Bali 80611</div>`)[0];
+                popup_4535467db3b261cffaf51879d3e29787.setContent(html_65d27d43116cfc3fe74ec1d8a0f26b28);
+            
+        
+
+        marker_6f3cf671139ecdf4b5464fb31ba7a557.bindPopup(popup_4535467db3b261cffaf51879d3e29787)
+        ;
+
+        
+    
+    
+            var marker_b0bcedd3519e326daeedfbad8f4bfd7f = L.marker(
+                [-8.690490752, 115.4302884],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_93ab629f6084deb8d07a5ab6ae6a2544 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a262b927d8e0d1df3d3ad4e4232c506 = $(`<div id="html_4a262b927d8e0d1df3d3ad4e4232c506" style="width: 100.0%; height: 100.0%;">Devil's Tears:Nusa Lembongan, Jungutbatu, Nusa Penida, Klungkung Regency, Bali 80771</div>`)[0];
+                popup_93ab629f6084deb8d07a5ab6ae6a2544.setContent(html_4a262b927d8e0d1df3d3ad4e4232c506);
+            
+        
+
+        marker_b0bcedd3519e326daeedfbad8f4bfd7f.bindPopup(popup_93ab629f6084deb8d07a5ab6ae6a2544)
+        ;
+
+        
+    
+    
+            var marker_8e95aa8a624e95c14f3bae9f83d08083 = L.marker(
+                [-8.481604508, 115.2070717],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_97204d962cb162cc108d1c8fc27392e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16d83aaf387ec8b6f5ac4192d636f220 = $(`<div id="html_16d83aaf387ec8b6f5ac4192d636f220" style="width: 100.0%; height: 100.0%;">Sangeh Monkey Florest:Jl. Brahmana, Sangeh, Kec. Abiansemal, Kabupaten Badung, Bali 80353</div>`)[0];
+                popup_97204d962cb162cc108d1c8fc27392e4.setContent(html_16d83aaf387ec8b6f5ac4192d636f220);
+            
+        
+
+        marker_8e95aa8a624e95c14f3bae9f83d08083.bindPopup(popup_97204d962cb162cc108d1c8fc27392e4)
+        ;
+
+        
+    
+    
+            var marker_5e7bd6afb27c40459bf337edcfb81293 = L.marker(
+                [-8.57519696, 115.2891238],
+                {}
+            ).addTo(marker_cluster_8705c66440767deda3fa4aa70a4f85ba);
+        
+    
+        var popup_0c425fe37489b6adb689741a7284e97b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_177d84569a50c0bbe0b501b07e5c576d = $(`<div id="html_177d84569a50c0bbe0b501b07e5c576d" style="width: 100.0%; height: 100.0%;">Tegenungan Waterfall:Kemenuh, Sukawati, Gianyar Regency, Bali</div>`)[0];
+                popup_0c425fe37489b6adb689741a7284e97b.setContent(html_177d84569a50c0bbe0b501b07e5c576d);
+            
+        
+
+        marker_5e7bd6afb27c40459bf337edcfb81293.bindPopup(popup_0c425fe37489b6adb689741a7284e97b)
+        ;
+
+        
+    
+    
+            marker_cluster_8705c66440767deda3fa4aa70a4f85ba.addTo(map_ca42a1f6e2c5c836584aa5ed9bfa58b0);
+        
+</script>
+</html>
